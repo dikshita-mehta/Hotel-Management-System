@@ -14,18 +14,20 @@
     <body>
         
         <h1 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h1>
-        <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
-            <a href="login.php"><i class="material-icons" style="font-size: 40px; color: black;">home</i></a>
-        </div>
-        <div class="bg-text">
-            <form action="booking.php" method="POST">
-                <h4>Username: <input type="text" placeholder="Username" name="username"></h4>
-                <h4>Password: <input type="password" placeholder="Password" name="password"></h4>
-                <input type="submit" placeholder="Login">
-            </form>
-            <h4>Do not have an account? <a href="sign.php" style="color:black;">Sign in</a></h4>
-        </table>
-        </div>
+        <form>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+</form>
         
     </body>
 </html>
