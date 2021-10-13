@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>User login</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             #h4{
