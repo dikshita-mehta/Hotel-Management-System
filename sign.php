@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
     <head>
-        <title>User login</title>
+        <meta charset="UTF-8">
+        <title>Sign up</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             #h4{
@@ -28,18 +29,20 @@
         </style>
     </head>
     <body>
-        
-        <h1 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h1>
+        <h4 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h4>
         <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
             <a href="login.php"><i class="material-icons" style="font-size: 40px; color: black;">home</i></a>
         </div>
-        <div class="bg-text">
-            <form action="booking.html" method="POST">
-                <h4>Username: <input type="text" placeholder="Username" name="username"></h4>
-                <h4>Password: <input type="password" placeholder="Password" name="password"></h4>
-                <input type="submit" placeholder="Login">
+        <div class="bg-text" style="align-items: center;">
+            <form action="user.php" method="POST">
+                <h4>Username: <input type="text" placeholder="Username" name="uname"></h4>
+                <h4>First name: <input type="text" placeholder="First name" name="fname"></h4>
+                <h4>Last name: <input type="text" placeholder="Last name" name="lname"></h4>
+                <h4>Email: <input type="email" placeholder="Email" name="mail"></h4>
+                <h4>Password: <input type="password" placeholder="Password" name="passw"></h4>
+                <h4>Re enter Password: <input type="password" placeholder="Password" name="repassw"></h4>
+                <input type="submit" value="Sign up">
             </form>
-            <h4>Do not have an account? <a href="sign.php" style="color:black;">Sign in</a></h4>
         </div>
     </body>
 </html>
