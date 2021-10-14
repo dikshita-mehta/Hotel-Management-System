@@ -12,7 +12,7 @@
 <body>
     <form action="" method="post">
         <div class="login-box">
-            <h1>User Login</h1>
+            <h1>Admin Login</h1>
   
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
