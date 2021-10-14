@@ -2,6 +2,8 @@
     <head>
         <title>User login</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
         <style>
             #h4{
                 color: black; 
@@ -30,16 +32,19 @@
     <body>
         
         <h1 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h1>
-        <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
-            <a href="login.php"><i class="material-icons" style="font-size: 40px; color: black;">home</i></a>
-        </div>
-        <div class="bg-text">
-            <form action="booking.html" method="POST">
-                <h4>Username: <input type="text" placeholder="Username" name="username"></h4>
-                <h4>Password: <input type="password" placeholder="Password" name="password"></h4>
-                <input type="submit" placeholder="Login">
-            </form>
-            <h4>Do not have an account? <a href="sign.php" style="color:black;">Sign in</a></h4>
-        </div>
+        <form>
+        <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Username</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputname" placeholder="Username" style="width:200px;">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password" style="width:200px;">
+    </div>
+  </div>
+</form>
     </body>
 </html>
