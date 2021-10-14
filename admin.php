@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
           
         if(($user['adminname'] == $adminname) && 
             ($user['password'] == $password)) {
-                header("Location: localhost/phpmyadmin");
+                header("Location: login.php");
         }
         else {
             echo "<script language='javascript'>";
