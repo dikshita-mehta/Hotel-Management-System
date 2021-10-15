@@ -24,7 +24,6 @@
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input type="password" placeholder="Password" name="password" value="">
             </div>
-  
             <input class="button" type="submit"
                      name="login" value="Sign In">
         </div>
@@ -64,6 +63,6 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
         }
     }
 }
-  
+
 ?>
 </html>
