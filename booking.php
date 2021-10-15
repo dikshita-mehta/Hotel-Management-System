@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="admin/css/reg.css" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -51,7 +53,7 @@
         <div class="container">
       
       
-       <img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">      
+       <!--<img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">-->     
         
 
       <div class="well">
@@ -79,35 +81,15 @@
                     <label for="phone">Enter Your Phone Number:</label>
                     <input type="text" class="form-control" name="phone" placeholder="018XXXXXXX" required>
                 </div>
-                 
-               
-                <button type="submit" class="btn btn-lg btn-primary button" name="submit">Book Now</button>
-
-               <br>
-                <div id="click_here">
-                    <a href="booking.php">Back to Home</a>
-                </div>
-
-
+                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Book Now</button>
+                </div>     
+                <br>
+                <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
+        <a href="booking.php"><i class="material-icons">home</i></a>
+    </div>
             </form>
         </div>
-        
-        
-
-
-
     </div>
-    
-    
-    
-    
-    
-
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
