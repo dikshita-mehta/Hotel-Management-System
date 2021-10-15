@@ -33,7 +33,6 @@
         <li><a data-toggle="tab" href="#menu2">Travel Booking</a></li>
         
     </ul>
-
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
         <h3>Guest details</h3>
@@ -49,13 +48,8 @@
         <p></p>
         </div>
         <div id="menu2" class="tab-pane fade">
-        
         <div class="container">
-      
-      
        <!--<img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">-->     
-        
-
       <div class="well">
             <h2>Book Now: 
                 </h2>
