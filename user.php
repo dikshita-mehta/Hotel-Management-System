@@ -10,20 +10,19 @@
 </head>
   
 <body>
+<h1 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h1>
     <form action="" method="post">
         <div class="login-box">
             <h1>User Login</h1>
   
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Username"
-                         name="adminname" value="">
+                <input type="text" placeholder="Username" name="adminname" value="">
             </div>
   
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password"
-                         name="password" value="">
+                <input type="password" placeholder="Password" name="password" value="">
             </div>
   
             <input class="button" type="submit"
@@ -55,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
           
         if(($user['adminname'] == $adminname) && 
             ($user['password'] == $password)) {
-                header("Location: login.php");
+                header("Location: booking.php");
         }
         else {
             echo "<script language='javascript'>";
