@@ -20,6 +20,15 @@
                   dateFormat : 'yy-mm-dd'
                 });
     } );
+        <?php
+            function test_input($data) {
+      
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
+        ?>
     </script>
     </head>
     <body>
@@ -34,29 +43,131 @@
 
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
-        <h3>Guest details</h3>
-        <form>
-            Name: <input type="text" placeholder="Name" name="name" value=""><br></br>
-            Age: <input type="number" placeholder="Age" name="age" value=""><br></br>
-            Phone number: <input type="number" placeholder="Phonenumber" name="phno" value=""><br></br>
-            Aadhar Number: <input type="number" placeholder="Aadhar Number" name="adno" value=""><br></br>
+            <br></br>
+            <form method="POST">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="adult"> Adults </label> 
+                        <input type="number" name="adult" min="0" max="15">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="child"> Children </label> 
+                        <input type="number" name="child" min="0" max="15">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enter</button>
+                <br></br>
+            </form>
+            <form method="POST">
+        <?php
+            $adno = 0;
+            $chno = 0;
+            if ($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                $adno = $_POST["adult"];
+                $chno = $_POST["child"];
+            }
+            for ($i=0;$i<$adno;$i++)
+            {?> <b>Adult</b> <?php echo $i+1; ?>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="inputname" placeholder="Name">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputage">Age</label>
+                        <input type="number" class="form-control" id="inputage" placeholder="Age">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control" id="inputemail" placeholder="Email">
+                    </div>
+                </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputaadhar">Aadhar Number</label>
+                        <input type="number" class="form-control" id="inputaadhar" placeholder="Aadhar Number">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputphone">Phone Number</label>
+                        <input type="number" class="form-control" id="inputphone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="inputState">State</label>
+                            <input type="text" class="form-control" id="inputState" placeholder="State">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                <br></br>
+            <?php}
+            for ($j=0;$j<$chno;$j++)
+            {?> <b>Child</b> <?php echo $j+1; ?>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="inputname" placeholder="Name">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputage">Age</label>
+                        <input type="number" class="form-control" id="inputage" placeholder="Age">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputaadhar">Aadhar Number</label>
+                        <input type="number" class="form-control" id="inputaadhar" placeholder="Aadhar Number">
+                    </div>
+                </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="inputState">State</label>
+                            <input type="text" class="form-control" id="inputState" placeholder="State">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                <br></br>
+                <?php }
+        ?>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <br></br>
         </form>
-        </div>
-        <div id="menu1" class="tab-pane fade">
-        <h3>Menu 1</h3>
-        <p></p>
-        </div>
-        <div id="menu2" class="tab-pane fade">
         
-        <div class="container">
-      
-      
-       <img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">      
-        
+        </div>
+        <div id="menu1" class="tab-pane fade">   
+        </div>
 
-      <div class="well">
-            <h2>Book Now: 
-                </h2>
+
+
+
+        <div id="menu2" class="tab-pane fade">
+        <div class="container">
+        <img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">      
+        <div class="well">
+            <h2>Book Now: </h2>
             <hr>
             <form action="" method="post" name="room_category">
               
@@ -87,27 +198,9 @@
                 <div id="click_here">
                     <a href="booking.php">Back to Home</a>
                 </div>
-
-
             </form>
         </div>
-        
-        
-
-
-
     </div>
-    
-    
-    
-    
-    
-
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
