@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <title>Booking</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Booking</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin/css/reg.css" type="text/css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".datepicker" ).datepicker({
+                  dateFormat : 'yy-mm-dd'
+                });
+  } );
+  </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="admin/css/reg.css" type="text/css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-    $( ".datepicker" ).datepicker({
-                  dateFormat : 'yy-mm-dd'
-                });
-    } );
-        <?php
-            function test_input($data) {
-      
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
-            }
-        ?>
-    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     </head>
     <body>
     <h1 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 50px; text-align: center;">Hotel Management System</h1>
@@ -40,7 +37,6 @@
         <li><a data-toggle="tab" href="#menu2">Travel Booking</a></li>
         
     </ul>
-
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <br></br>
@@ -165,9 +161,10 @@
 
         <div id="menu2" class="tab-pane fade">
         <div class="container">
-        <img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">      
-        <div class="well">
-            <h2>Book Now: </h2>
+       <!--<img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">-->     
+      <div class="well">
+            <h2>Book Now: 
+                </h2>
             <hr>
             <form action="" method="post" name="room_category">
               
@@ -190,14 +187,12 @@
                     <label for="phone">Enter Your Phone Number:</label>
                     <input type="text" class="form-control" name="phone" placeholder="018XXXXXXX" required>
                 </div>
-                 
-               
-                <button type="submit" class="btn btn-lg btn-primary button" name="submit">Book Now</button>
-
-               <br>
-                <div id="click_here">
-                    <a href="booking.php">Back to Home</a>
-                </div>
+                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Book Now</button>
+                </div>     
+                <br>
+                <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
+        <a href="booking.php"><i class="material-icons">home</i></a>
+    </div>
             </form>
         </div>
     </div>
@@ -206,7 +201,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
         </div>
     </div>
     </div>
