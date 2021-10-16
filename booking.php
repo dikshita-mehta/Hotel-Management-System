@@ -81,11 +81,11 @@
                 </div>
                     <div class="form-group col-md-6">
                         <label for="inputaadhar">Aadhar Number</label>
-                        <input type="number" class="form-control" id="inputaadhar" placeholder="Aadhar Number">
+                        <input type="tel" pattern="[0-9]{4} [0-9]{4} [0-9]{4}" class="form-control" id="inputaadhar" placeholder="xxxx xxxx xxxx">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputphone">Phone Number</label>
-                        <input type="number" class="form-control" id="inputphone" placeholder="Phone Number">
+                        <input type="tel" pattern="[0-9]{10}" class="form-control" id="inputphone" placeholder="Phone Number">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
