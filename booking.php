@@ -58,7 +58,7 @@
         <?php
             $adno = 0;
             $chno = 0;
-            if ($_SERVER["REQUEST_METHOD"] == "POST")
+            if ($_SERVER["REQUEST_METHOD"]=='POST')
             {
                 $adno = $_POST["adult"];
                 $chno = $_POST["child"];
@@ -108,7 +108,8 @@
                         </div>
                     </div>
                 <br></br>
-            <?php}
+            <?php
+            }
             for ($j=0;$j<$chno;$j++)
             {?> <b>Child</b> <?php echo $j+1; ?>
                 <div class="form-row">
