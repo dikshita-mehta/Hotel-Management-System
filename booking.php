@@ -19,6 +19,21 @@
                 });
   } );
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script language="javascript">
+			$( document ).ready(function() {
+				   var now = new Date();
+
+					var day = ("0" + now.getDate()).slice(-2);
+					var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+					var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+					$('#ExpiryDate,#ExpiryDat').val(today);
+					$('#ExpiryDate,#ExpiryDat').attr('min', today);
+			});
+		</script>
+        <script src="bookingjs.js"> </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -162,24 +177,21 @@
             <hr>
             <form action="" method="post" name="room_category">
                <div class="form-row">
-                   <div class="form-group col-md-4">
+                    <div class="form-group col-md-4">
                         <label for="checkin">Check In :</label>&nbsp;&nbsp;&nbsp;
-                        <input type="text" class="datepicker" name="checkin">
+                        <input id="ExpiryDate" type="date" name="checkin">
                     </div>
                
                     <div class="form-group col-md-4">
                         <label for="checkout">Check Out:</label>&nbsp;
-                        <input type="text" class="datepicker" name="checkout">
+                        <input id="ExpiryDat" type="date" name="checkout">
                     </div>
-
                     <div class="form-group col-md-4">
                         <label for="roomcount">Rooms</label>
                         <input type="number" name="roomcount" min="1" max="5" placeholder="Rooms" required>
                     </div>
                 </div>
-                
-                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Continue</button>
-                </div>     
+                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Continue</button>  
                 <br>
                 <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
                 <a href="booking.php"><i class="material-icons">home</i></a>
