@@ -33,7 +33,7 @@
     <div class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Customer details</a></li>
-        <li><a data-toggle="tab" href="#menu1">Guest details</a></li>
+        <li><a data-toggle="tab" href="#menu1">Room Details</a></li>
         <li><a data-toggle="tab" href="#menu2">Travel Booking</a></li>
         
     </ul>
@@ -149,54 +149,47 @@
                 <br></br>
                 <?php }
         ?>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Continue</button>
         <br></br>
         </form>
         
         </div>
-        <div id="menu1" class="tab-pane fade">   
-        </div>
-
-
-
-
-        <div id="menu2" class="tab-pane fade">
+        <div id="menu1" class="tab-pane fade"> 
         <div class="container">
-       <!--<img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">-->     
-      <div class="well">
-            <h2>Book Now: 
-                </h2>
+        <!--<img class="img-responsive" src="images/home_banner.jpg" style="width:100%; height:180px;">-->     
+        <div class="well">
+            <h2>Book Now: </h2>
             <hr>
             <form action="" method="post" name="room_category">
-              
-              
-               <div class="form-group">
-                    <label for="checkin">Check In :</label>&nbsp;&nbsp;&nbsp;
-                    <input type="text" class="datepicker" name="checkin">
-
-                </div>
+               <div class="form-row">
+                   <div class="form-group col-md-4">
+                        <label for="checkin">Check In :</label>&nbsp;&nbsp;&nbsp;
+                        <input type="text" class="datepicker" name="checkin">
+                    </div>
                
-               <div class="form-group">
-                    <label for="checkout">Check Out:</label>&nbsp;
-                    <input type="text" class="datepicker" name="checkout">
+                    <div class="form-group col-md-4">
+                        <label for="checkout">Check Out:</label>&nbsp;
+                        <input type="text" class="datepicker" name="checkout">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="roomcount">Rooms</label>
+                        <input type="number" name="roomcount" min="1" max="5" placeholder="Rooms" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="name">Enter Your Full Name:</label>
-                    <input type="text" class="form-control" name="name" placeholder="Jhon Wicky" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Enter Your Phone Number:</label>
-                    <input type="text" class="form-control" name="phone" placeholder="018XXXXXXX" required>
-                </div>
-                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Book Now</button>
+                
+                <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Continue</button>
                 </div>     
                 <br>
                 <div style="position: absolute; top: 30px; left: 20px; width: 100px;">
-        <a href="booking.php"><i class="material-icons">home</i></a>
-    </div>
+                <a href="booking.php"><i class="material-icons">home</i></a>
+                </div>
             </form>
+        </div>  
         </div>
-    </div>
+
+        
+        <div id="menu2" class="tab-pane fade"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
