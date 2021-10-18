@@ -50,21 +50,29 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     $stmt = $conn->prepare("SELECT * FROM adminlogin");
     $stmt->execute();
     $users = $stmt->fetchAll();
-      
-    foreach($users as $user) {
-          
-        if(($user['adminname'] == $adminname) && 
-            ($user['password'] == $password)) {
-                header("localhost/phpmyadmin");
+    
+    $var = 1;
+
+    foreach($users as $user) 
+    {
+        if(($user['adminname'] == $adminname) && ($user['password'] == $password)) 
+        {
+            header("Location: booking.php");
+            $var = 1;
         }
-        else {
-            echo "<script language='javascript'>";
-            echo "alert('WRONG INFORMATION')";
-            echo "</script>";
-            die();
+        else
+        {
+            $var = 0;
         }
     }
+    if($var == 0)
+    {
+        echo "<script language='javascript'>";
+        echo "alert('WRONG INFORMATION')";
+        echo "</script>";
+        die();
+    }
 }
-  
+
 ?>
 </html>

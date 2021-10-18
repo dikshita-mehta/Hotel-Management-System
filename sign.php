@@ -34,10 +34,9 @@
             <a href="login.php"><i class="material-icons" style="font-size: 40px; color: black;">home</i></a>
         </div>
         <div class="bg-text" style="align-items: center;">
-            <form action="user.php" method="POST">
+            <form action="" method="POST">
                 <h4>Username: <input type="text" placeholder="Username" name="uname"></h4>
-                <h4>First name: <input type="text" placeholder="First name" name="fname"></h4>
-                <h4>Last name: <input type="text" placeholder="Last name" name="lname"></h4>
+                <h4>Name: <input type="text" placeholder="name" name="name"></h4>
                 <h4>Email: <input type="email" placeholder="Email" name="mail"></h4>
                 <h4>Password: <input type="password" placeholder="Password" name="passw"></h4>
                 <h4>Re enter Password: <input type="password" placeholder="Password" name="repassw"></h4>
@@ -45,4 +44,58 @@
             </form>
         </div>
     </body>
+    <?php
+        include_once('connection.php');
+        
+        function test_input($data) {
+            
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+        
+        if ($_SERVER["REQUEST_METHOD"]== "POST") 
+        {
+            $username = test_input($_POST["uname"]);
+            $name = test_input($_POST["name"]);
+            $email = test_input($_POST["mail"]);
+            $password = test_input($_POST["passw"]);
+            $repass = test_input($_POST["repassw"]);
+            $stmt = $conn->prepare("SELECT * FROM userlogin");
+            $stmt->execute();
+            $users = $stmt->fetchAll();
+            
+            $var = 1;
+
+            foreach ($users as $user) 
+            {
+                if($user['username'] == $username)
+                $var *= 0;
+            }
+            if ($var != 0) 
+            {
+                if ($password == $repass) 
+                {
+                    $sql = "INSERT INTO userlogin VALUES ($username,$name,$email,$password)";
+                    $conn->exec($sql);
+                }
+                else
+                {
+                    echo "<script language='javascript'>";
+                    echo "alert('Password not matching')";
+                    echo "</script>";
+                    die();
+                }
+            }
+            else
+            {
+                echo "<script language='javascript'>";
+                echo "alert('Username already exists')";
+                echo "</script>";
+                die();
+            }  
+        }
+
+        ?>
 </html>
