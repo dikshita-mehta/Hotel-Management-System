@@ -200,8 +200,9 @@
         </div>  
         </div>
 
-        
-        <div id="menu2" class="tab-pane fade"></div>
+        <div id="menu2" class="tab-pane fade">
+            
+        </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

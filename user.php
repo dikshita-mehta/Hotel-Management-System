@@ -24,10 +24,10 @@
                 <i class="fa fa-lock" aria-hidden="true"></i>
                 <input type="password" placeholder="Password" name="password" value="">
             </div>
-            <input class="button" type="submit"
-                     name="login" value="Sign In">
+            <input class="button" type="submit" name="login" value="Sign In">
         </div>
     </form>
+    <h4 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; color: black; font-size: 20px; text-align: center; margin-top: 32%;" > Do not have an account? <a href="sign.php" style="color:black;">Sign up</a></h4>
 </body>
 <?php
   
