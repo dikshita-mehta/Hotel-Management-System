@@ -57,10 +57,10 @@
         
         if ($_SERVER["REQUEST_METHOD"]== "POST") 
         {
-            $username = test_input($_POST["uname"]);
+            $uname = test_input($_POST["uname"]);
             $name = test_input($_POST["name"]);
             $email = test_input($_POST["mail"]);
-            $password = test_input($_POST["passw"]);
+            $passw = test_input($_POST["passw"]);
             $repass = test_input($_POST["repassw"]);
             $stmt = $conn->prepare("SELECT * FROM userlogin");
             $stmt->execute();
@@ -70,15 +70,37 @@
 
             foreach ($users as $user) 
             {
-                if($user['username'] == $username)
+                if($user['username'] == $uname)
                 $var *= 0;
             }
             if ($var != 0) 
             {
-                if ($password == $repass) 
+                if ($passw == $repass) 
                 {
-                    $sql = "INSERT INTO userlogin VALUES ($username,$name,$email,$password)";
-                    $conn->exec($sql);
+                    try 
+                    {
+                        $servername = "localhost:3306";
+                        $dbname = "loginpage";
+                        $username = "root";
+                        $password = "";
+                    
+                        $conn = new PDO("mysql:host=$servername; dbname=loginpage", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                    }
+                    catch(PDOException $e) 
+                    {
+                        echo "Connection failed: " . $e->getMessage();
+                    }
+                    try 
+                    {
+                        $sql = "INSERT INTO userlogin (Username, Email, Name, Password) VALUES ('$uname','$name','$email','$passw')";
+                        $conn->exec($sql);
+                    } 
+                    catch(PDOException $e)
+                    {
+                        die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+                    }
+                    unset($conn);
                 }
                 else
                 {

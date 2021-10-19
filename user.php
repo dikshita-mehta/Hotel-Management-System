@@ -17,7 +17,7 @@
   
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Username" name="adminname" value="">
+                <input type="text" placeholder="Username" name="username" value="">
             </div>
   
             <div class="textbox">
@@ -43,9 +43,9 @@ function test_input($data) {
    
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
       
-    $adminname = test_input($_POST["adminname"]);
+    $username = test_input($_POST["username"]);
     $password = test_input($_POST["password"]);
-    $stmt = $conn->prepare("SELECT * FROM adminlogin");
+    $stmt = $conn->prepare("SELECT * FROM userlogin");
     $stmt->execute();
     $users = $stmt->fetchAll();
     
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
     foreach($users as $user) 
     {
-        if(($user['adminname'] == $adminname) && ($user['password'] == $password)) 
+        if(($user['Username'] == $username) && ($user['Password'] == $password)) 
         {
             header("Location: booking.php");
             $var = 1;
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     if($var == 0)
     {
         echo "<script language='javascript'>";
-        echo "alert('WRONG INFORMATION')";
+        echo "alert('Account does not exist. Create a new account')";
         echo "</script>";
         die();
     }
