@@ -203,13 +203,39 @@
 
                 <div id="menu2" class="tab-pane fade">
                     <div class="container">
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="roomcount">Rooms</label>
-                                <input type="number" name="roomcount" min="1" max="5" placeholder="Rooms" required>
+                        <br></br>
+                        <form>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="travelplan">
+                                <label class="form-check-label" for="travelplan">
+                                    Do you want to select a travel plan? 
+                                </label>
                             </div>
-                        </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="touristguide">
+                                <label class="form-check-label" for="touristguide">
+                                    Do you wish to have a tourist guide? 
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cabdriver">
+                                <label class="form-check-label" for="cabdriver">
+                                    Do you wish to have a cab along with a driver?
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="cab">
+                                <label class="form-check-label" for="cabdriver">
+                                    Do you prefer to rent a car alone?
+                                </label>
+                            </div>
+                            <br></br>
+                            <button  type="submit" class="btn btn-lg btn-primary button" name="submit">Confirm Details</button>
+                        </form>
                     </div>
+                    <br></br>
+                    <br></br>
+                    <a href="billing.php"><button type="submit" class="btn btn-lg btn-primary button" name="submit">Proceed with Billing</button></a>
                 </div>    
             </div>
         </div>
